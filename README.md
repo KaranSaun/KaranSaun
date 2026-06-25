@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/banner.svg">
-  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/banner.svg" width="100%" alt="Karan Saun — AI Systems Engineer">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/banner-animated.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/banner-animated.svg" width="100%" alt="Karan Saun — AI Systems Engineer">
 </picture>
 
 ---
