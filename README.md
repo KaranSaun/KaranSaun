@@ -9,6 +9,7 @@
   <a href="https://github.com/KaranSaun/wms"><img src="https://img.shields.io/badge/NEXUS-Warehouse_Intel-00d4ff?style=for-the-badge&logo=github&labelColor=0a0e17" alt="NEXUS"></a>
   <a href="https://github.com/KaranSaun/TXLAYERS"><img src="https://img.shields.io/badge/TexLayerAI-Textile_AI-8b5cf6?style=for-the-badge&logo=github&labelColor=0a0e17" alt="TexLayerAI"></a>
   <a href="https://github.com/KaranSaun/quantara"><img src="https://img.shields.io/badge/APEX%20OS-AI_Trading-10b981?style=for-the-badge&logo=github&labelColor=0a0e17" alt="APEX OS"></a>
+  <a href="https://github.com/KaranSaun/Sentiy-Market-Psychology-Narrative-Intelligence-Engine"><img src="https://img.shields.io/badge/Sentiy-Market_Psychology-f59e0b?style=for-the-badge&logo=github&labelColor=0a0e17" alt="Sentiy"></a>
 </p>
 
 ---
@@ -21,7 +22,7 @@
 
 I build **production AI systems** that automate complex real-world workflows.
 
-Every project I ship is full-stack: AI backend, interactive dashboard, containerized deployment. My work spans **warehouse intelligence**, **manufacturing automation**, and **financial trading** — the constant is AI-powered automation at production scale.
+Every project I ship is full-stack: AI backend, interactive dashboard, containerized deployment. My work spans **warehouse intelligence**, **manufacturing automation**, **financial trading**, and **market psychology** — the constant is AI-powered automation at production scale.
 
 I don't stop at the model. I build the system.
 
@@ -34,6 +35,7 @@ I don't stop at the model. I build the system.
 ■ Building   → NEXUS Warehouse Intelligence
 ■ Building   → TexLayerAI Textile Automation  
 ■ Building   → APEX OS Trading Platform
+■ Building   → Sentiy Market Psychology Engine
 
 ◆ Learning   → Distributed AI Systems
 ◆ Research   → Multi-agent Architectures
@@ -103,6 +105,12 @@ I don't stop at the model. I build the system.
     <td><a href="https://github.com/KaranSaun/quantara"><b>APEX OS</b></a><br><sub>AI Trading Platform</sub></td>
     <td>Personal AI command center for Indian retail options traders. Routes queries across 5+ AI providers with automatic fallback, analyzes NSE data in real-time, and delivers morning trade recommendations via Telegram.</td>
     <td><sub>FastAPI · Next.js · Supabase<br>Gemini · Claude · Groq<br>yfinance · Telegram · Docker</sub></td>
+  </tr>
+  <tr>
+    <td align="center">04</td>
+    <td><a href="https://github.com/KaranSaun/Sentiy-Market-Psychology-Narrative-Intelligence-Engine"><b>Sentiy</b></a><br><sub>Market Psychology Engine</sub></td>
+    <td>Real-time market psychology and narrative intelligence. Ingests news, social media, and price data — applies NLP sentiment analysis, behavioral finance models, and crowd psychology signals to uncover <em>why</em> markets move.</td>
+    <td><sub>FastAPI · Next.js · Celery<br>NLTK · VADER · yfinance<br>NewsAPI · Pandas · Docker</sub></td>
   </tr>
 </table>
 
@@ -245,8 +253,10 @@ I don't stop at the model. I build the system.
 Q3 2026  ■ NEXUS v2 — Multi-facility support, predictive analytics, AI insights
          ■ TexLayerAI — API productization, public demo, batch processing
          ■ APEX OS — Real-time execution alerts, backtesting engine
+         ■ Sentiy — Real-time news pipeline, multi-source aggregation, Telegram bot
 
-Q4 2026  ■ Distributed AI pipeline framework (open source)
+Q4 2026  ■ Sentiy — Predictive sentiment model, options flow integration, public dashboard
+         ■ Distributed AI pipeline framework (open source)
          ■ Multi-agent orchestration system
          ■ GPU-accelerated inference serving
 
@@ -261,6 +271,7 @@ Q4 2026  ■ Distributed AI pipeline framework (open source)
 
 <p align="center">
   <a href="https://github.com/KaranSaun"><img src="https://img.shields.io/badge/GitHub-KaranSaun-0a0e17?style=for-the-badge&logo=github&logoColor=00d4ff&labelColor=0a0e17&borderColor=00d4ff" alt="GitHub"></a>
+  <a href="https://github.com/KaranSaun/Sentiy-Market-Psychology-Narrative-Intelligence-Engine"><img src="https://img.shields.io/badge/Sentiy-Market_Psychology-f59e0b?style=for-the-badge&logo=github&labelColor=0a0e17" alt="Sentiy"></a>
   <a href="mailto:karan@example.com"><img src="https://img.shields.io/badge/Email-Contact-8b5cf6?style=for-the-badge&logo=maildotru&logoColor=8b5cf6&labelColor=0a0e17" alt="Email"></a>
   <a href="https://www.linkedin.com/in/karansaun/"><img src="https://img.shields.io/badge/LinkedIn-Profile-00d4ff?style=for-the-badge&logo=linkedin&logoColor=00d4ff&labelColor=0a0e17" alt="LinkedIn"></a>
 </p>
