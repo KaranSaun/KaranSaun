@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <style>
+      @keyframes wave1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @keyframes wave2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+      @keyframes wave3 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes wave4 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+      @keyframes wave5 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes glowPulse2 { 0%,100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+      .w1 { animation: wave1 3s ease-in-out infinite; }
+      .w2 { animation: wave2 3.5s ease-in-out infinite; }
+      .w3 { animation: wave3 4s ease-in-out infinite; }
+      .w4 { animation: wave4 2.8s ease-in-out infinite; }
+      .w5 { animation: wave5 3.2s ease-in-out infinite; }
+      .gw { animation: glowPulse2 4s ease-in-out infinite; }
+    </style>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00D4FF" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#00D4FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="waveGlow"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#waveGrad)"/>
+
+  <!-- Horizontal wave lines -->
+  <g fill="none" stroke-width="0.8">
+    <path class="w1" d="M 0 50 Q 200 40 400 55 Q 600 45 800 58 Q 1000 48 1200 52" stroke="#00D4FF" opacity="0.25"/>
+    <path class="w2" d="M 0 80 Q 200 90 400 75 Q 600 85 800 78 Q 1000 90 1200 82" stroke="#8B5CF6" opacity="0.2"/>
+    <path class="w3" d="M 0 110 Q 200 100 400 115 Q 600 105 800 118 Q 1000 108 1200 112" stroke="#00D4FF" opacity="0.25"/>
+    <path class="w4" d="M 0 140 Q 200 150 400 135 Q 600 145 800 138 Q 1000 150 1200 142" stroke="#8B5CF6" opacity="0.2"/>
+    <path class="w5" d="M 0 170 Q 200 160 400 175 Q 600 165 800 178 Q 1000 168 1200 172" stroke="#00D4FF" opacity="0.25"/>
+    <path class="w1" d="M 0 200 Q 200 210 400 195 Q 600 205 800 198 Q 1000 210 1200 202" stroke="#8B5CF6" opacity="0.2"/>
+    <path class="w2" d="M 0 230 Q 200 220 400 235 Q 600 225 800 238 Q 1000 228 1200 232" stroke="#00D4FF" opacity="0.25"/>
+    <path class="w3" d="M 0 260 Q 200 270 400 255 Q 600 265 800 258 Q 1000 270 1200 262" stroke="#8B5CF6" opacity="0.2"/>
+  </g>
+
+  <!-- Vertical grid lines -->
+  <g stroke="#00D4FF" stroke-width="0.3" opacity="0.08">
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="300"/>
+    <line x1="900" y1="0" x2="900" y2="300"/>
+    <line x1="1000" y1="0" x2="1000" y2="300"/>
+    <line x1="1100" y1="0" x2="1100" y2="300"/>
+  </g>
+
+  <!-- Glowing orbs on wave intersections -->
+  <g filter="url(#waveGlow)">
+    <circle class="w1" cx="200" cy="50" r="3" fill="#00D4FF" opacity="0.4"/>
+    <circle class="w2" cx="400" cy="75" r="2.5" fill="#8B5CF6" opacity="0.35"/>
+    <circle class="w3" cx="600" cy="105" r="3" fill="#00D4FF" opacity="0.4"/>
+    <circle class="w4" cx="800" cy="138" r="2.5" fill="#8B5CF6" opacity="0.35"/>
+    <circle class="w5" cx="1000" cy="168" r="3" fill="#00D4FF" opacity="0.4"/>
+  </g>
+
+  <g opacity="0.15">
+    <text x="600" y="290" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="9" letter-spacing="4">WAVE FIELD · REAL-TIME DEFORMATION</text>
+  </g>
+</svg>

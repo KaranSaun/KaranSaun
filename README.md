@@ -3,7 +3,10 @@
   <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/banner-animated.svg" width="100%" alt="Karan Saun — AI Systems Engineer">
 </picture>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/divider-animated.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/divider-animated.svg" width="100%" alt="">
+</picture>
 
 <p align="center">
   <a href="https://github.com/KaranSaun/wms"><img src="https://img.shields.io/badge/NEXUS-Warehouse_Intel-00d4ff?style=for-the-badge&logo=github&labelColor=0a0e17" alt="NEXUS"></a>
@@ -79,6 +82,13 @@ I don't stop at the model. I build the system.
 
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/wave-grid.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/wave-grid.svg" width="100%" alt="Wave Field Visualization">
+</picture>
+
+---
+
 ## ▎Flagship Projects
 
 <table>
@@ -144,6 +154,20 @@ I don't stop at the model. I build the system.
                    │  (AI Tasks) │
                    └─────────────┘
 ```
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/network-animated.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/network-animated.svg" width="100%" alt="Neural Network Visualization">
+</picture>
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/KaranSaun/main/assets/touchdesigner-showcase.gif">
+  <img src="https://raw.githubusercontent.com/KaranSaun/KaranSaun/main/assets/touchdesigner-showcase.gif" width="100%" alt="Real-time generative visualization — p5.js particle network with wave displacement">
+</picture>
 
 ---
 

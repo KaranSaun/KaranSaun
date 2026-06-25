@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="60" viewBox="0 0 1200 60">
+  <defs>
+    <style>
+      @keyframes wave1 { 0% { d: path("M0,30 Q150,10 300,30 Q450,50 600,30 Q750,10 900,30 Q1050,50 1200,30 L1200,60 L0,60 Z"); } 50% { d: path("M0,30 Q150,50 300,30 Q450,10 600,30 Q750,50 900,30 Q1050,10 1200,30 L1200,60 L0,60 Z"); } 100% { d: path("M0,30 Q150,10 300,30 Q450,50 600,30 Q750,10 900,30 Q1050,50 1200,30 L1200,60 L0,60 Z"); } }
+      @keyframes shift { 0% { transform: translateX(0); } 100% { transform: translateX(-600px); } }
+      .wave-layer { animation: shift 8s linear infinite; }
+    </style>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00D4FF" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#00D4FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="60" fill="#0A0E17"/>
+  <rect width="1200" height="60" fill="url(#divGrad)"/>
+  <g class="wave-layer" opacity="0.08">
+    <path d="M0,30 Q150,10 300,30 Q450,50 600,30 Q750,10 900,30 Q1050,50 1200,30 L2400,30" stroke="#00D4FF" stroke-width="0.5" fill="none"/>
+    <path d="M0,35 Q150,15 300,35 Q450,55 600,35 Q750,15 900,35 Q1050,55 1200,35 L2400,35" stroke="#8B5CF6" stroke-width="0.3" fill="none"/>
+  </g>
+</svg>

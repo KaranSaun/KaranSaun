@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <style>
+      @keyframes pulse1 { 0%,100% { r: 4; opacity: 0.6; } 50% { r: 7; opacity: 1; } }
+      @keyframes pulse2 { 0%,100% { r: 3; opacity: 0.4; } 50% { r: 6; opacity: 0.9; } }
+      @keyframes pulse3 { 0%,100% { r: 2.5; opacity: 0.3; } 50% { r: 5; opacity: 0.7; } }
+      @keyframes connect1 { 0%,100% { opacity: 0.1; } 50% { opacity: 0.4; } }
+      @keyframes connect2 { 0%,100% { opacity: 0.08; } 50% { opacity: 0.3; } }
+      @keyframes connect3 { 0%,100% { opacity: 0.05; } 50% { opacity: 0.25; } }
+      @keyframes drift1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(8px,-6px); } }
+      @keyframes drift2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-6px,8px); } }
+      @keyframes drift3 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(10px,4px); } }
+      @keyframes dataFlow { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
+      .node1 { animation: pulse1 3s ease-in-out infinite; }
+      .node2 { animation: pulse2 4s ease-in-out infinite; }
+      .node3 { animation: pulse3 5s ease-in-out infinite; }
+      .drift1 { animation: drift1 6s ease-in-out infinite; }
+      .drift2 { animation: drift2 7s ease-in-out infinite; }
+      .drift3 { animation: drift3 8s ease-in-out infinite; }
+      .link1 { animation: connect1 3s ease-in-out infinite; }
+      .link2 { animation: connect2 4s ease-in-out infinite; }
+      .link3 { animation: connect3 5s ease-in-out infinite; }
+      .dataPulse { stroke-dasharray: 4 12; animation: dataFlow 2s linear infinite; }
+    </style>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0F1420"/>
+      <stop offset="100%" stop-color="#0A0E17"/>
+    </radialGradient>
+    <radialGradient id="nodeCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodePurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nodeGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg2)"/>
+
+  <!-- Connecting lines (drawn first so they're behind nodes) -->
+  <g stroke="#00D4FF" stroke-width="0.6" fill="none">
+    <!-- Layer 1 connections -->
+    <line class="link1" x1="100" y1="150" x2="250" y2="100"/>
+    <line class="link2" x1="100" y1="150" x2="250" y2="200"/>
+    <line class="link2" x1="100" y1="150" x2="250" y2="150"/>
+
+    <!-- Layer 1→2 connections -->
+    <line class="link1" x1="250" y1="100" x2="400" y2="60"/>
+    <line class="link3" x1="250" y1="100" x2="400" y2="150"/>
+    <line class="link2" x1="250" y1="150" x2="400" y2="150"/>
+    <line class="link1" x1="250" y1="150" x2="400" y2="240"/>
+    <line class="link2" x1="250" y1="200" x2="400" y2="150"/>
+    <line class="link3" x1="250" y1="200" x2="400" y2="240"/>
+
+    <!-- Layer 2→3 connections -->
+    <line class="link1" x1="400" y1="60" x2="550" y2="100"/>
+    <line class="link3" x1="400" y1="60" x2="550" y2="200"/>
+    <line class="link2" x1="400" y1="150" x2="550" y2="100"/>
+    <line class="link1" x1="400" y1="150" x2="550" y2="150"/>
+    <line class="link3" x1="400" y1="150" x2="550" y2="200"/>
+    <line class="link2" x1="400" y1="240" x2="550" y2="150"/>
+    <line class="link1" x1="400" y1="240" x2="550" y2="200"/>
+
+    <!-- Layer 3→4 connections -->
+    <line class="link2" x1="550" y1="100" x2="700" y2="60"/>
+    <line class="link1" x1="550" y1="100" x2="700" y2="150"/>
+    <line class="link3" x1="550" y1="150" x2="700" y2="150"/>
+    <line class="link1" x1="550" y1="150" x2="700" y2="240"/>
+    <line class="link2" x1="550" y1="200" x2="700" y2="150"/>
+    <line class="link3" x1="550" y1="200" x2="700" y2="240"/>
+
+    <!-- Layer 4→5 connections -->
+    <line class="link1" x1="700" y1="60" x2="850" y2="100"/>
+    <line class="link2" x1="700" y1="60" x2="850" y2="150"/>
+    <line class="link3" x1="700" y1="150" x2="850" y2="100"/>
+    <line class="link1" x1="700" y1="150" x2="850" y2="200"/>
+    <line class="link2" x1="700" y1="240" x2="850" y2="150"/>
+    <line class="link3" x1="700" y1="240" x2="850" y2="200"/>
+
+    <!-- Layer 5→6 connections -->
+    <line class="link1" x1="850" y1="100" x2="950" y2="150"/>
+    <line class="link2" x1="850" y1="150" x2="950" y2="150"/>
+    <line class="link3" x1="850" y1="200" x2="950" y2="150"/>
+    <line class="link1" x1="850" y1="100" x2="950" y2="80"/>
+    <line class="link2" x1="850" y1="200" x2="950" y2="220"/>
+  </g>
+
+  <!-- Data flow particles on connections -->
+  <g fill="#00D4FF" opacity="0.6">
+    <circle r="2" filter="url(#nodeGlow)">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M100,150 L250,100"/>
+    </circle>
+    <circle r="1.5" fill="#8B5CF6" filter="url(#nodeGlow)">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M250,150 L400,240"/>
+    </circle>
+    <circle r="1.5" fill="#10B981" filter="url(#nodeGlow)">
+      <animateMotion dur="3.5s" repeatCount="indefinite" path="M400,150 L550,100"/>
+    </circle>
+    <circle r="2" fill="#00D4FF" filter="url(#nodeGlow)">
+      <animateMotion dur="4.5s" repeatCount="indefinite" path="M550,200 L700,150"/>
+    </circle>
+    <circle r="1.5" fill="#8B5CF6" filter="url(#nodeGlow)">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M700,60 L850,100"/>
+    </circle>
+    <circle r="1.5" fill="#00D4FF" filter="url(#nodeGlow)">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M850,150 L950,150"/>
+    </circle>
+  </g>
+
+  <!-- Glow backgrounds for nodes -->
+  <g>
+    <!-- Layer 1 -->
+    <circle class="drift1" cx="100" cy="150" r="30" fill="url(#nodeCyan)"/>
+    <!-- Layer 2 -->
+    <circle class="drift2" cx="250" cy="100" r="25" fill="url(#nodePurple)"/>
+    <circle class="drift3" cx="250" cy="150" r="25" fill="url(#nodeCyan)"/>
+    <circle class="drift1" cx="250" cy="200" r="25" fill="url(#nodePurple)"/>
+    <!-- Layer 3 -->
+    <circle class="drift2" cx="400" cy="60" r="25" fill="url(#nodeCyan)"/>
+    <circle class="drift3" cx="400" cy="150" r="25" fill="url(#nodePurple)"/>
+    <circle class="drift1" cx="400" cy="240" r="25" fill="url(#nodeCyan)"/>
+    <!-- Layer 4 -->
+    <circle class="drift2" cx="550" cy="100" r="25" fill="url(#nodePurple)"/>
+    <circle class="drift3" cx="550" cy="150" r="25" fill="url(#nodeCyan)"/>
+    <circle class="drift1" cx="550" cy="200" r="25" fill="url(#nodePurple)"/>
+    <!-- Layer 5 -->
+    <circle class="drift2" cx="700" cy="60" r="25" fill="url(#nodeCyan)"/>
+    <circle class="drift3" cx="700" cy="150" r="25" fill="url(#nodePurple)"/>
+    <circle class="drift1" cx="700" cy="240" r="25" fill="url(#nodeCyan)"/>
+    <!-- Layer 6 -->
+    <circle class="drift2" cx="850" cy="100" r="25" fill="url(#nodePurple)"/>
+    <circle class="drift3" cx="850" cy="150" r="25" fill="url(#nodeCyan)"/>
+    <circle class="drift1" cx="850" cy="200" r="25" fill="url(#nodePurple)"/>
+    <!-- Output -->
+    <circle class="drift2" cx="950" cy="80" r="20" fill="url(#nodeCyan)"/>
+    <circle class="drift3" cx="950" cy="150" r="20" fill="url(#nodePurple)"/>
+    <circle class="drift1" cx="950" cy="220" r="20" fill="url(#nodeCyan)"/>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#nodeGlow)">
+    <!-- Layer 1 -->
+    <circle class="node1" cx="100" cy="150" r="5" fill="#00D4FF"/>
+    <!-- Layer 2 -->
+    <circle class="node2" cx="250" cy="100" r="4" fill="#8B5CF6"/>
+    <circle class="node3" cx="250" cy="150" r="4" fill="#00D4FF"/>
+    <circle class="node1" cx="250" cy="200" r="4" fill="#8B5CF6"/>
+    <!-- Layer 3 -->
+    <circle class="node2" cx="400" cy="60" r="4" fill="#00D4FF"/>
+    <circle class="node3" cx="400" cy="150" r="5" fill="#8B5CF6"/>
+    <circle class="node1" cx="400" cy="240" r="4" fill="#00D4FF"/>
+    <!-- Layer 4 -->
+    <circle class="node2" cx="550" cy="100" r="4" fill="#8B5CF6"/>
+    <circle class="node3" cx="550" cy="150" r="5" fill="#00D4FF"/>
+    <circle class="node1" cx="550" cy="200" r="4" fill="#8B5CF6"/>
+    <!-- Layer 5 -->
+    <circle class="node2" cx="700" cy="60" r="4" fill="#00D4FF"/>
+    <circle class="node3" cx="700" cy="150" r="5" fill="#8B5CF6"/>
+    <circle class="node1" cx="700" cy="240" r="4" fill="#00D4FF"/>
+    <!-- Layer 6 -->
+    <circle class="node2" cx="850" cy="100" r="4" fill="#8B5CF6"/>
+    <circle class="node3" cx="850" cy="150" r="4" fill="#00D4FF"/>
+    <circle class="node1" cx="850" cy="200" r="4" fill="#8B5CF6"/>
+    <!-- Output -->
+    <circle class="node2" cx="950" cy="80" r="5" fill="#00D4FF"/>
+    <circle class="node3" cx="950" cy="150" r="5" fill="#8B5CF6"/>
+    <circle class="node1" cx="950" cy="220" r="5" fill="#00D4FF"/>
+  </g>
+
+  <!-- Input label -->
+  <text x="100" y="190" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="9" letter-spacing="3" opacity="0.4">INPUT</text>
+  <!-- Output label -->
+  <text x="950" y="260" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="9" letter-spacing="3" opacity="0.4">OUTPUT</text>
+
+  <!-- Layer labels -->
+  <g fill="#475569" font-family="'Inter',sans-serif" font-size="8" letter-spacing="2" opacity="0.3" text-anchor="middle">
+    <text x="250" y="235">L1</text>
+    <text x="400" y="275">L2</text>
+    <text x="550" y="235">L3</text>
+    <text x="700" y="275">L4</text>
+    <text x="850" y="235">L5</text>
+  </g>
+</svg>
