@@ -83,8 +83,8 @@ I don't stop at the model. I build the system.
 ---
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/wave-grid.svg">
-  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/wave-grid.svg" width="100%" alt="Wave Field Visualization">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/activity-timeline.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/activity-timeline.svg" width="100%" alt="Activity Breakdown — Project Focus by Domain">
 </picture>
 
 ---
@@ -158,8 +158,8 @@ I don't stop at the model. I build the system.
 ---
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/network-animated.svg">
-  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/network-animated.svg" width="100%" alt="Neural Network Visualization">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/knowledge-graph.svg">
+  <img src="https://raw.githubusercontent.com/KaranSaun/github-brand-system/main/assets/knowledge-graph.svg" width="100%" alt="Skill Graph — Knowledge Distribution">
 </picture>
 
 ---

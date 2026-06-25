@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      @keyframes pulseA { 0%,100% { r: 8; opacity: 0.8; } 50% { r: 11; opacity: 1; } }
+      @keyframes pulseB { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+      @keyframes flow1 { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
+      @keyframes glowP { 0%,100% { filter: drop-shadow(0 0 4px #00D4FF) drop-shadow(0 0 12px rgba(0,212,255,0.2)); } 50% { filter: drop-shadow(0 0 8px #00D4FF) drop-shadow(0 0 24px rgba(0,212,255,0.4)); } }
+      @keyframes labelIn { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+      .core { animation: pulseA 3s ease-in-out infinite; }
+      .glow-text { animation: glowP 4s ease-in-out infinite; }
+      .conn-pulse { stroke-dasharray: 8 4; animation: flow1 2s linear infinite; }
+      .label-fade { animation: labelIn 5s ease-in-out infinite; }
+    </style>
+    <radialGradient id="bgKG" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0F1420"/>
+      <stop offset="100%" stop-color="#0A0E17"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeAI" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeBE" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeFE" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeInf" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeData" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="kgGlow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#bgKG)"/>
+
+  <text x="600" y="35" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="10" letter-spacing="4" opacity="0.4">SKILL GRAPH · KNOWLEDGE DISTRIBUTION</text>
+
+  <!-- Center core glow -->
+  <circle cx="600" cy="260" r="120" fill="url(#coreGlow)"/>
+
+  <!-- Category cluster glows -->
+  <!-- AI/ML - top left -->
+  <circle cx="340" cy="150" r="90" fill="url(#nodeAI)"/>
+  <!-- Backend - top right -->
+  <circle cx="860" cy="150" r="90" fill="url(#nodeBE)"/>
+  <!-- Frontend - bottom right -->
+  <circle cx="860" cy="370" r="90" fill="url(#nodeFE)"/>
+  <!-- Infrastructure - bottom left -->
+  <circle cx="340" cy="370" r="90" fill="url(#nodeInf)"/>
+  <!-- Data - center right -->
+  <circle cx="750" cy="260" r="70" fill="url(#nodeData)"/>
+
+  <!-- Connection lines from center to categories -->
+  <g fill="none" stroke-width="1.2">
+    <path d="M600,260 Q470,200 340,150" stroke="#8B5CF6" opacity="0.3"/>
+    <path class="conn-pulse" d="M600,260 Q470,200 340,150" stroke="#8B5CF6" opacity="0.5"/>
+    <path d="M600,260 Q730,200 860,150" stroke="#00D4FF" opacity="0.3"/>
+    <path class="conn-pulse" d="M600,260 Q730,200 860,150" stroke="#00D4FF" opacity="0.5"/>
+    <path d="M600,260 Q730,320 860,370" stroke="#10B981" opacity="0.3"/>
+    <path class="conn-pulse" d="M600,260 Q730,320 860,370" stroke="#10B981" opacity="0.5"/>
+    <path d="M600,260 Q470,320 340,370" stroke="#F59E0B" opacity="0.3"/>
+    <path class="conn-pulse" d="M600,260 Q470,320 340,370" stroke="#F59E0B" opacity="0.5"/>
+    <path d="M600,260 Q680,260 750,260" stroke="#EC4899" opacity="0.3"/>
+    <path class="conn-pulse" d="M600,260 Q680,260 750,260" stroke="#EC4899" opacity="0.5"/>
+  </g>
+
+  <!-- Cross connections between categories -->
+  <g fill="none" stroke-width="0.5" opacity="0.08">
+    <line x1="340" y1="150" x2="860" y2="370"/>
+    <line x1="860" y1="150" x2="340" y2="370"/>
+    <line x1="340" y1="150" x2="750" y2="260"/>
+    <line x1="860" y1="150" x2="750" y2="260"/>
+    <line x1="340" y1="370" x2="750" y2="260"/>
+    <line x1="860" y1="370" x2="750" y2="260"/>
+  </g>
+
+  <!-- Center node -->
+  <circle cx="600" cy="260" r="42" fill="#0A0E17" stroke="#00D4FF" stroke-width="1.5" filter="url(#kgGlow)" class="core"/>
+  <circle cx="600" cy="260" r="38" fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.4"/>
+  <text x="600" y="255" text-anchor="middle" fill="#00D4FF" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="1">KARAN</text>
+  <text x="600" y="272" text-anchor="middle" fill="#00D4FF" font-family="'Inter',sans-serif" font-size="10" font-weight="400" letter-spacing="2">SAUN</text>
+
+  <!-- Category nodes (larger circles) -->
+  <!-- AI / ML -->
+  <g transform="translate(340, 150)" class="glow-text">
+    <circle r="36" fill="#0A0E17" stroke="#8B5CF6" stroke-width="1.2"/>
+    <text y="3" text-anchor="middle" fill="#8B5CF6" font-family="'Inter',sans-serif" font-size="11" font-weight="600">AI / ML</text>
+    <!-- Sub-skills -->
+    <text x="0" y="52" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">SAM2 · ESRGAN · NLP</text>
+    <text x="0" y="64" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">VADER · OpenCV · LLMs</text>
+  </g>
+
+  <!-- Backend -->
+  <g transform="translate(860, 150)" class="glow-text">
+    <circle r="36" fill="#0A0E17" stroke="#00D4FF" stroke-width="1.2"/>
+    <text y="3" text-anchor="middle" fill="#00D4FF" font-family="'Inter',sans-serif" font-size="11" font-weight="600">BACKEND</text>
+    <text x="0" y="52" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">FastAPI · Celery · Redis</text>
+    <text x="0" y="64" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">PostgreSQL · WebSockets</text>
+  </g>
+
+  <!-- Frontend -->
+  <g transform="translate(860, 370)" class="glow-text">
+    <circle r="36" fill="#0A0E17" stroke="#10B981" stroke-width="1.2"/>
+    <text y="3" text-anchor="middle" fill="#10B981" font-family="'Inter',sans-serif" font-size="11" font-weight="600">FRONTEND</text>
+    <text x="0" y="52" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">Next.js · React · Tailwind</text>
+    <text x="0" y="64" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">Framer · Recharts · Zustand</text>
+  </g>
+
+  <!-- Infrastructure -->
+  <g transform="translate(340, 370)" class="glow-text">
+    <circle r="36" fill="#0A0E17" stroke="#F59E0B" stroke-width="1.2"/>
+    <text y="3" text-anchor="middle" fill="#F59E0B" font-family="'Inter',sans-serif" font-size="11" font-weight="600">INFRA</text>
+    <text x="0" y="52" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">Docker · Nginx · AWS</text>
+    <text x="0" y="64" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="8" opacity="0.6">DO · RunPod · Render</text>
+  </g>
+
+  <!-- Data -->
+  <g transform="translate(750, 260)" class="glow-text">
+    <circle r="28" fill="#0A0E17" stroke="#EC4899" stroke-width="1.2"/>
+    <text y="3" text-anchor="middle" fill="#EC4899" font-family="'Inter',sans-serif" font-size="10" font-weight="600">DATA</text>
+    <text x="0" y="44" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="7" opacity="0.6">ETL · Pandas</text>
+    <text x="0" y="54" text-anchor="middle" fill="#64748B" font-family="'Inter',sans-serif" font-size="7" opacity="0.6">SQLAlchemy</text>
+  </g>
+
+  <!-- Project connection lines -->
+  <g fill="none" stroke-width="0.4" opacity="0.06">
+    <path d="M340,150 Q600,260 860,370"/>
+    <path d="M860,150 Q600,260 340,370"/>
+  </g>
+
+  <!-- Bottom annotation -->
+  <text x="600" y="470" text-anchor="middle" fill="#475569" font-family="'Inter',sans-serif" font-size="8" letter-spacing="3" opacity="0.3">5 ENGINEERING DOMAINS · 20+ TECHNOLOGIES · FULL-STACK AI</text>
+</svg>
